@@ -127,19 +127,11 @@
 
 /* Tooltip content*/
 
-.tooltip-content img {
-	position: relative;
-	height: 170px;
-	display: block;
-	float: left;
-	margin-right: 1em;
-}
-
 .tooltip-text {
 	font-size: 0.68em;
 	line-height: 1.35;
 	display: block;
-	padding: 1.31em 1.21em 1.21em 0;
+	padding: 1.31em 1.21em 1.21em 1.31em;
 	color: #fff;
 }
 
