@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" ng-app="app">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Tooltip Styles Inspiration | Classic</title>
 
-		<link rel="stylesheet" type="text/css" href="css/example.css" />
-		<link rel="stylesheet" type="text/css" href="css/tooltip-classic.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" ng-href="css/tooltip-{{ $state.current.name || 'classic' }}.css"/>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="ng-tooltip.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 	</head>
+	<body class="color-{{ $state.current.name }}">
 
-	<body class="color-1" ng-app="ngTooltip">
+		<a href="https://github.com/ndelvalle/ng-tooltip"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
 		<div class="container">
 			<div class="content">
-				<div class="dummy dummy-text">
+				<header class="codrops-header">
+					<h1> ng-tooltip <span> An angular directive with a small collection of various hover tooltip </span></h1>	
 
-		    	<p style="margin-top: 300px;">Tesseract, finite but unbounded take root and flourish, <tooltip-classic tooltip-content="'</span><strong>Leonardo da Vinci</strong>, was an Italian polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.</span>'"></tooltip-classic></p>
+					<nav class="codrops-demos">
+						<a ng-class="{ 'current-demo': $state.includes('classic') }" ui-sref="classic">Classic</a>
+						<a ng-class="{ 'current-demo': $state.includes('box') }" ui-sref="box">Box</a>
+						<a ng-class="{ 'current-demo': $state.includes('round') }" ui-sref="round">Round</a>
+					</nav>
 
+				</header>
+				<div class="dummy" ng-class="{ 'dummy-text': $state.includes('classic') || $state.includes('box'), 'dummy-menu': $state.includes('round') }">
+					<div ui-view></div>
 				</div>
-			</div>
-		</div>
+
+				<p>this is an angular wrapper of <a href="https://github.com/codrops/TooltipStylesInspiration"><strong>Tooltip Styles Inspiration</strong></a></p>
+
+			</div><!-- /content -->
+		</div><!-- /container -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="ng-tooltip.js"></script>
+    <script src="app.js"></script>
 	</body>
 </html>
