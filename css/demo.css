@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
 
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body, html, .container {
+	height: 100%;
+}
+
 body {
 	background: #fff;
 	color: #74777b;
@@ -18,12 +26,17 @@ a:hover, a:focus {
 	color: #74777b;
 }
 
-.color-1 {
+.color-classic {
+	background: #464355;
+	color: #eee;
+}
+
+.color-box {
 	background: #434d55;
 	color: #eee;
 }
 
-.color-2 {
+.color-round {
 	background: #47c9af;
 	color: #fff;
 }
