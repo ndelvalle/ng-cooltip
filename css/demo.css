@@ -41,12 +41,12 @@ a:hover, a:focus {
 	color: #fff;
 }
 
-.color-2 a {
+.color-round a {
 	color: rgba(0,0,0,0.3);
 }
 
-.color-2 a:hover,
-.color-2 a:focus {
+.color-round a:hover,
+.color-round a:focus {
 	color: #fff;
 }
 
