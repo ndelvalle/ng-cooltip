@@ -31,7 +31,7 @@
 
 	angular.module('app', [
 		'ui.router',
-		'ngTooltip'
+		'ng-tooltip'
 	])
 
 	.config(function($stateProvider, $urlRouterProvider) {

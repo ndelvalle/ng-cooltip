@@ -12,7 +12,7 @@
 		effect:  '=tooltipEffect'
 	};
 
-	angular.module('ngTooltip', [])
+	angular.module('ng-tooltip', [])
 
 	.directive('tooltipClassic', [function () {
 		return {
