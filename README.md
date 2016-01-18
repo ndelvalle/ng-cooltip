@@ -1,5 +1,27 @@
 # ng-tooltip
 
+An angular module with a small collection of various hover tooltip. This module is an angular wrapper of [Tooltip Styles Inspiration](https://github.com/codrops/TooltipStylesInspiration)
+
+## Usage:
+
+1. include the ng-tooltip dependency for your app.
+
+    ```js
+    angular.module('myApp', ['ng-tooltip'])
+    ```
+    
+2. Include the supplied JS file
+
+    ```html
+    <link rel='stylesheet' href='build/ng-tooltip.min.css' type='text/css' />
+    ```
+3. Include the choosen tootlip CSS file (or create your own CSS to override defaults).
+
+    ```html
+    <link rel='stylesheet' href='build/ng-tooltip-classic.min.css' type='text/css' />
+    ```
+
+4. That's it -- you're done!
 
 ## Copyright and license
 
