@@ -1,6 +1,8 @@
-# ng-tooltip (not production ready)
+# ng-tooltip
 
-An angular module with a small collection of various hover tooltip. This module is an angular wrapper of [Tooltip Styles Inspiration](https://github.com/codrops/TooltipStylesInspiration)
+An angular module with a small collection of various hover tooltip. This module is an angular wrapper of [Tooltip Styles Inspiration](https://github.com/codrops/TooltipStylesInspiration).
+
+This module is not production ready yet.
 
 ## Usage:
 
