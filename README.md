@@ -6,7 +6,7 @@ This module is not production ready yet.
 
 ## Usage:
 
-1. include the ng-tooltip dependency for your app.
+1. include the ng-tooltip dependency to your app.
 
     ```js
     angular.module('myApp', ['ng-tooltip'])
