@@ -6,7 +6,7 @@ This module is not production ready yet.
 
 ## Usage:
 
-1. include the ng-tooltip dependency to your app.
+1. include the ng-tooltip dependency to your app
 
     ```js
     angular.module('myApp', ['ng-tooltip'])
@@ -17,7 +17,7 @@ This module is not production ready yet.
     ```html
     <script type='text/javascript' src='build/ng-tooltip.min.js'></script>
     ```
-3. Include the choosen tootlip CSS file (or create your own CSS to override defaults).
+3. Include the choosen tootlip CSS file (or create your own CSS to override defaults)
 
     ```html
     <link rel='stylesheet' href='build/ng-tooltip-classic.min.css' type='text/css' />
