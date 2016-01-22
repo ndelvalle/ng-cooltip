@@ -1,4 +1,4 @@
-# ng-tooltip
+# ng-cooltip
 
 An angular module with a small collection of various hover tooltip. This module is an angular wrapper of [Tooltip Styles Inspiration](https://github.com/codrops/TooltipStylesInspiration).
 
@@ -6,24 +6,29 @@ This module is not production ready yet.
 
 ## Usage:
 
-1. include the ng-tooltip dependency to your app
+1. Install ng-cooltip from bower or inport script manually
+  ```
+    $ bower install ng-cooltip --save
+  ```
+
+2. Include the ng-tooltip dependency to your app
 
     ```js
-    angular.module('myApp', ['ng-tooltip'])
+    angular.module('myApp', ['ng-cooltip'])
     ```
     
-2. Include the supplied JS file
+3. Include the supplied JS file
 
     ```html
-    <script type='text/javascript' src='build/ng-tooltip.min.js'></script>
+    <script type='text/javascript' src='build/ng-cooltip.min.js'></script>
     ```
-3. Include the choosen tootlip CSS file (or create your own CSS to override defaults)
+4. Include the choosen tootlip CSS file (or create your own CSS to override defaults)
 
     ```html
-    <link rel='stylesheet' href='build/ng-tooltip-classic.min.css' type='text/css' />
+    <link rel='stylesheet' href='build/ng-cooltip-classic.min.css' type='text/css' />
     ```
 
-4. That's it -- you're done!
+5. That's it -- you're done!
 
 ## Copyright and license
 
