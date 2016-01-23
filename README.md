@@ -20,12 +20,12 @@ This module is not production ready yet.
 3. Include the supplied JS file
 
     ```html
-    <script type='text/javascript' src='build/ng-cooltip.min.js'></script>
+    <script type='text/javascript' src='dist/ng-cooltip.min.js'></script>
     ```
 4. Include the choosen tootlip CSS file (or create your own CSS to override defaults)
 
     ```html
-    <link rel='stylesheet' href='build/ng-cooltip-classic.min.css' type='text/css' />
+    <link rel='stylesheet' href='dist/ng-cooltip-classic.min.css' type='text/css' />
     ```
 
 5. That's it -- you're done!
