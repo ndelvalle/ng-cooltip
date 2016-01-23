@@ -7,14 +7,14 @@
 	}];
 
 	var commonScope = {
-		item:    '=tooltipItem',
-		content: '=tooltipContent',
-		effect:  '=tooltipEffect'
+		item:    '=cooltipItem',
+		content: '=cooltipContent',
+		effect:  '=cooltipEffect'
 	};
 
-	angular.module('ng-tooltip', [])
+	angular.module('ng-cooltip', [])
 
-	.directive('tooltipClassic', [function () {
+	.directive('cooltipClassic', [function () {
 		return {
 			restrict: 'AE',
 			replace: true,
@@ -24,7 +24,7 @@
 		};
 	}])
 
-	.directive('tooltipRound', [function () {
+	.directive('cooltipRound', [function () {
 		return {
 			restrict: 'AE',
 			replace: true,
@@ -34,7 +34,7 @@
 		};
 	}])
 
-	.run(function($templateCache) {
+	.run(['$templateCache', function($templateCache) {
 
 	  $templateCache.put('classic.html', [
 	  	'<span class="tooltip tooltip-effect-{{ effect }}">',
@@ -51,7 +51,7 @@
 	  	'</a>'
 	  ].join('\n'));
 
-	});
+	}]);
 
 })();
 

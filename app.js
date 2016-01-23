@@ -31,7 +31,7 @@
 
 	angular.module('app', [
 		'ui.router',
-		'ng-tooltip'
+		'ng-cooltip'
 	])
 
 	.config(function($stateProvider, $urlRouterProvider) {
@@ -70,22 +70,22 @@
 
 	  $templateCache.put('partials/classic.html',[
 	  	'<p>',
-	  		'<tooltip-classic tooltip-item="\'Lorem\'" tooltip-effect="1" tooltip-content="Ctrl.ttcontent"></tooltip-classic> ',
+	  		'<cooltip-classic cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip-classic> ',
 	  		'ipsum dolor sit amet, has in dico ',
-	  		'<tooltip-classic tooltip-item="\'lobortis\'" tooltip-effect="2" tooltip-content="Ctrl.ttcontent"></tooltip-classic> ',
+	  		'<cooltip-classic cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip-classic> ',
 	  		'expetendis, per nibh vero mutat no. Qui no copiosae ',
-	  		'<tooltip-classic tooltip-item="\'deserunt\'" tooltip-effect="3" tooltip-content="Ctrl.ttcontent"></tooltip-classic>',
+	  		'<cooltip-classic cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip-classic>',
 	  		'. Vix in delenit omittam elaboraret, ut ',
-	  		'<tooltip-classic tooltip-item="\'idque\'" tooltip-effect="4" tooltip-content="Ctrl.ttcontent"></tooltip-classic> ',
+	  		'<cooltip-classic cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip-classic> ',
 	  		'atqui deleniti qui. Quo nisl fuisset id. Ut veniam mollis vix. Veniam iudicabit no pri, ne eam sale cetero ',
-	  		'<tooltip-classic tooltip-item="\'reprehendunt\'" tooltip-effect="5" tooltip-content="Ctrl.ttcontent"></tooltip-classic>.',
+	  		'<cooltip-classic cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip-classic>.',
 	  	'</p>'
 	  ].join('\n'));
 
 	  $templateCache.put('partials/round.html',[
 	  	'<ul>',
 	  		'<li>',
-	  			'<tooltip-round ng-repeat="item in Ctrl.list" tooltip-item="item.name" tooltip-effect="item.effect" tooltip-content="item.content"></tooltip-round>',
+	  			'<cooltip-round ng-repeat="item in Ctrl.list" cooltip-item="item.name" cooltip-effect="item.effect" cooltip-content="item.content"></cooltip-round>',
 	  		'</li>',
 	  	'</ul>'
 	  ].join('\n'));

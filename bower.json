@@ -1,13 +1,14 @@
 {
-  "name": "ng-tooltip",
-  "main": "ng-tooltip.js",
-  "homepage": "https://github.com/ndelvalle/ng-tooltip",
+  "name": "ng-cooltip",
+  "main": "ng-cooltip.js",
+  "homepage": "https://github.com/ndelvalle/ng-cooltip",
   "authors": [
     "ndelvalle <nicolas.delvalle@gmail.com>"
   ],
   "description": "An angular module with a small collection of various hover tooltip",
   "keywords": [
-    "tooltip"
+    "tooltip",
+    "cooltip"
   ],
   "license": "MIT",
   "ignore": [
