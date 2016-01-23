@@ -51,7 +51,7 @@
 	      url: '/box',
 	      controller: globalCtrl,
 	      controllerAs: 'Ctrl',
-	      templateUrl: 'partials/classic.html'
+	      templateUrl: 'partials/box.html'
 	    })
 
 	    .state('round', {
@@ -81,6 +81,20 @@
 	  		'<cooltip-classic cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip-classic>.',
 	  	'</p>'
 	  ].join('\n'));
+
+    $templateCache.put('partials/box.html',[
+      '<p>',
+        '<cooltip-box cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip-box> ',
+        'ipsum dolor sit amet, has in dico ',
+        '<cooltip-box cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip-box> ',
+        'expetendis, per nibh vero mutat no. Qui no copiosae ',
+        '<cooltip-box cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip-box>',
+        '. Vix in delenit omittam elaboraret, ut ',
+        '<cooltip-box cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip-box> ',
+        'atqui deleniti qui. Quo nisl fuisset id. Ut veniam mollis vix. Veniam iudicabit no pri, ne eam sale cetero ',
+        '<cooltip-box cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip-box>.',
+      '</p>'
+    ].join('\n'));
 
 	  $templateCache.put('partials/round.html',[
 	  	'<ul>',
