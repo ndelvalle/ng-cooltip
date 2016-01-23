@@ -28,8 +28,6 @@ This module is not production ready yet.
     <link rel='stylesheet' href='dist/ng-cooltip-classic.min.css' type='text/css' />
     ```
 
-5. That's it -- you're done!
-
 ## Copyright and license
 
 ```
