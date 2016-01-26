@@ -1,46 +1,24 @@
 (function (){
 	'use strict';
 
-	var commonCtrl = ['$scope', '$sce', function ($scope, $sce) {
-		$scope.trustedHtmlContent = $sce.trustAsHtml($scope.content);
-		$scope.effect = ($scope.effect > 0 && $scope.effect < 6) ? $scope.effect : 1;
-	}];
-
-	var commonScope = {
-		item:    '=cooltipItem',
-		content: '=cooltipContent',
-		effect:  '=cooltipEffect'
-	};
-
 	angular.module('ng-cooltip', [])
 
-	.directive('cooltipClassic', [function () {
+	.directive('cooltip', [function () {
 		return {
 			restrict: 'AE',
 			replace: true,
-			scope: commonScope,
-			controller: commonCtrl,
-			templateUrl: 'classic.html'
-		};
-	}])
-
-  .directive('cooltipBox', [function () {
-    return {
-      restrict: 'AE',
-      replace: true,
-      scope: commonScope,
-      controller: commonCtrl,
-      templateUrl: 'box.html'
-    };
-  }])
-
-	.directive('cooltipRound', [function () {
-		return {
-			restrict: 'AE',
-			replace: true,
-			scope: commonScope,
-			controller: commonCtrl,
-			templateUrl: 'round.html'
+			scope: {
+				item:    '=cooltipItem',
+				content: '=cooltipContent',
+				effect:  '=cooltipEffect'
+			},
+			controller: ['$scope', '$sce', function ($scope, $sce) {
+				$scope.trustedHtmlContent = $sce.trustAsHtml($scope.content);
+				$scope.effect = ($scope.effect > 0 && $scope.effect < 6) ? $scope.effect : 1;
+			}],
+			templateUrl: function (elem, attr) {
+				return (attr.type || 'classic') + '.html';
+			}
 		};
 	}])
 
