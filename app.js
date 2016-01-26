@@ -49,8 +49,8 @@
 
 	  $stateProvider
 	    .state('classic', getState('classic'))
-	    .state('box', getState('classic'))
-	    .state('round', getState('classic'));
+	    .state('box', getState('box'))
+	    .state('round', getState('round'));
 	})
 
 	.run(['$rootScope', '$state', function ($rootScope, $state) {
