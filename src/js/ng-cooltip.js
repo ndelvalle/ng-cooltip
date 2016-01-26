@@ -47,32 +47,38 @@
 	.run(['$templateCache', function($templateCache) {
 
 	  $templateCache.put('classic.html', [
-      '<span id="cooltip-classic">',
-  	  	'<span class="tooltip tooltip-effect-{{ effect }}">',
-  	  		'<span class="tooltip-item">{{ item }}</span>',
-  	  		'<span class="tooltip-content clearfix">',
-  	  			'<span class="tooltip-text" ng-bind-html="trustedHtmlContent"></span>',
-  	  		'</span>',
-  	  	'</span>',
+      '<span id="ng-cooltip">',
+        '<span id="cooltip-classic">',
+    	  	'<span class="tooltip tooltip-effect-{{ effect }}">',
+    	  		'<span class="tooltip-item">{{ item }}</span>',
+    	  		'<span class="tooltip-content clearfix">',
+    	  			'<span class="tooltip-text" ng-bind-html="trustedHtmlContent"></span>',
+    	  		'</span>',
+    	  	'</span>',
+        '</span>',
       '</span>'
 	  ].join('\n'));
 
     $templateCache.put('box.html', [
-      '<span id="cooltip-box">',
-        '<span class="tooltip tooltip-effect-{{ effect }}">',
-          '<span class="tooltip-item">{{ item }}</span>',
-          '<span class="tooltip-content clearfix">',
-            '<span class="tooltip-text" ng-bind-html="trustedHtmlContent"></span>',
+      '<span id="ng-cooltip">',
+        '<span id="cooltip-box">',
+          '<span class="tooltip tooltip-effect-{{ effect }}">',
+            '<span class="tooltip-item">{{ item }}</span>',
+            '<span class="tooltip-content clearfix">',
+              '<span class="tooltip-text" ng-bind-html="trustedHtmlContent"></span>',
+            '</span>',
           '</span>',
         '</span>',
       '</span>'
     ].join('\n'));
 
 	  $templateCache.put('round.html', [
-      '<span id="cooltip-round">',
-	  	  '<a class="tooltip tooltip-effect-{{ effect }}" href="#"> {{ item }}',
-	  		 '<span class="tooltip-content" ng-bind-html="trustedHtmlContent"></span>',
-	  	  '</a>',
+      '<span id="ng-cooltip">',
+        '<span id="cooltip-round">',
+  	  	  '<a class="tooltip tooltip-effect-{{ effect }}" href="#"> {{ item }}',
+  	  		 '<span class="tooltip-content" ng-bind-html="trustedHtmlContent"></span>',
+  	  	  '</a>',
+        '</span>',
       '</span>'
 	  ].join('\n'));
 
