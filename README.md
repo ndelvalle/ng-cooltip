@@ -39,8 +39,7 @@ An angular module with a small collection of various hover tooltip. This module 
 | cooltip-content | content on tooltip, it could be an html element| String / html element |
 | cooltip-effect  | firing tooltip effect                          | [1-5]                 |
 
-Usage example:
-
+#### Usage example
 ```html
 <p>Lorem ipsum dolor sit amet, et perfecto deserunt <cooltip-classic cooltip-item="intellegam" cooltip-content="Vel ut solum erant dicit, eum te aperiam efficiendi, et eos alia eruditi persecuti. Ius ex omnis voluptatum" cooltip-effect="1"></cooltip-classic>nam, quem doming platonem vim no.</p>
 ```
