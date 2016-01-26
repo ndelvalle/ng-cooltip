@@ -29,6 +29,15 @@
 		}];
 	}];
 
+	function getState(type) {
+		return {
+			url: '/' + type,
+			controller: type == 'round' ? roundCtrl : globalCtrl,
+			controllerAs: 'Ctrl',
+			templateUrl: 'partials/' + type + '.html'
+		}
+	}
+
 	angular.module('app', [
 		'ui.router',
 		'ng-cooltip'
@@ -39,27 +48,9 @@
 	  $urlRouterProvider.otherwise('/classic');
 
 	  $stateProvider
-
-	    .state('classic', {
-	      url: '/classic',
-	      controller: globalCtrl,
-	      controllerAs: 'Ctrl',
-	      templateUrl: 'partials/classic.html',
-	    })
-
-	    .state('box', {
-	      url: '/box',
-	      controller: globalCtrl,
-	      controllerAs: 'Ctrl',
-	      templateUrl: 'partials/box.html'
-	    })
-
-	    .state('round', {
-	      url: '/round',
-	      controller: roundCtrl,
-	      controllerAs: 'Ctrl',
-	      templateUrl: 'partials/round.html'
-	    });
+	    .state('classic', getState('classic'))
+	    .state('box', getState('classic'))
+	    .state('round', getState('classic'));
 	})
 
 	.run(['$rootScope', '$state', function ($rootScope, $state) {
@@ -70,36 +61,36 @@
 
 	  $templateCache.put('partials/classic.html',[
 	  	'<p>',
-	  		'<cooltip-classic cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip-classic> ',
+	  		'<cooltip type="classic" cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip> ',
 	  		'ipsum dolor sit amet, has in dico ',
-	  		'<cooltip-classic cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip-classic> ',
+	  		'<cooltip type="classic" cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip> ',
 	  		'expetendis, per nibh vero mutat no. Qui no copiosae ',
-	  		'<cooltip-classic cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip-classic>',
+	  		'<cooltip type="classic" cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip>',
 	  		'. Vix in delenit omittam elaboraret, ut ',
-	  		'<cooltip-classic cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip-classic> ',
+	  		'<cooltip type="classic" cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip> ',
 	  		'atqui deleniti qui. Quo nisl fuisset id. Ut veniam mollis vix. Veniam iudicabit no pri, ne eam sale cetero ',
-	  		'<cooltip-classic cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip-classic>.',
+	  		'<cooltip type="classic" cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip>.',
 	  	'</p>'
 	  ].join('\n'));
 
     $templateCache.put('partials/box.html',[
       '<p>',
-        '<cooltip-box cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip-box> ',
+        '<cooltip type="box" cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip> ',
         'ipsum dolor sit amet, has in dico ',
-        '<cooltip-box cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip-box> ',
+        '<cooltip type="box" cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip> ',
         'expetendis, per nibh vero mutat no. Qui no copiosae ',
-        '<cooltip-box cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip-box>',
+        '<cooltip type="box" cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip>',
         '. Vix in delenit omittam elaboraret, ut ',
-        '<cooltip-box cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip-box> ',
+        '<cooltip type="box" cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip> ',
         'atqui deleniti qui. Quo nisl fuisset id. Ut veniam mollis vix. Veniam iudicabit no pri, ne eam sale cetero ',
-        '<cooltip-box cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip-box>.',
+        '<cooltip type="box" cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip>.',
       '</p>'
     ].join('\n'));
 
 	  $templateCache.put('partials/round.html',[
 	  	'<ul>',
 	  		'<li>',
-	  			'<cooltip-round ng-repeat="item in Ctrl.list" cooltip-item="item.name" cooltip-effect="item.effect" cooltip-content="item.content"></cooltip-round>',
+	  			'<cooltip type="round" ng-repeat="item in Ctrl.list" cooltip-item="item.name" cooltip-effect="item.effect" cooltip-content="item.content"></cooltip>',
 	  		'</li>',
 	  	'</ul>'
 	  ].join('\n'));
