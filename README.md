@@ -26,12 +26,13 @@ An angular module with a small collection of various hover tooltip. This module 
     ```js
     angular.module('myApp', ['ng-cooltip'])
     ```
+    
 #### Directives
+* cooltipClassic
+* cooltipBox
+* cooltipRound
 
-* cooltip-classic
-* cooltip-box
-* cooltip-round
-
+#### Params
 | option          | Description                                    | Values                |
 | -------------   |:----------------------------------------------:| ---------------------:|
 | cooltip-item    | word / sentence that fires the tooltip         | String                |
