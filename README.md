@@ -21,7 +21,7 @@ An angular module with a small collection of various hover tooltip. This module 
     <link rel='stylesheet' href='dist/ng-cooltip.min.css' type='text/css' />
     ```
     
-4. Add ng-tooltip dependency to your app
+4. Add ng-cooltip dependency to your app
 
     ```js
     angular.module('myApp', ['ng-cooltip'])
