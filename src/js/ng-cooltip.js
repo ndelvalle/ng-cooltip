@@ -6,7 +6,6 @@
 	.directive('cooltip', [function () {
 		return {
 			restrict: 'AE',
-			replace: true,
 			scope: {
 				item:    '=cooltipItem',
 				content: '=cooltipContent',
