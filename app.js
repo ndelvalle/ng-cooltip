@@ -32,10 +32,10 @@
 	function getState(type) {
 		return {
 			url: '/' + type,
-			controller: type == 'round' ? roundCtrl : globalCtrl,
+			controller: type === 'round' ? roundCtrl : globalCtrl,
 			controllerAs: 'Ctrl',
 			templateUrl: 'partials/' + type + '.html'
-		}
+		};
 	}
 
 	angular.module('app', [
