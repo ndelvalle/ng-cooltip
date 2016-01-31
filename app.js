@@ -61,36 +61,36 @@
 
 	  $templateCache.put('partials/classic.html',[
 	  	'<p>',
-	  		'<cooltip type="classic" cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip> ',
+	  		'<cooltip cooltip-type="classic" cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip> ',
 	  		'ipsum dolor sit amet, has in dico ',
-	  		'<cooltip type="classic" cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip> ',
+	  		'<cooltip cooltip-type="classic" cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip> ',
 	  		'expetendis, per nibh vero mutat no. Qui no copiosae ',
-	  		'<cooltip type="classic" cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip>',
+	  		'<cooltip cooltip-type="classic" cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip>',
 	  		'. Vix in delenit omittam elaboraret, ut ',
-	  		'<cooltip type="classic" cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip> ',
+	  		'<cooltip cooltip-type="classic" cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip> ',
 	  		'atqui deleniti qui. Quo nisl fuisset id. Ut veniam mollis vix. Veniam iudicabit no pri, ne eam sale cetero ',
-	  		'<cooltip type="classic" cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip>.',
+	  		'<cooltip cooltip-type="classic" cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip>.',
 	  	'</p>'
 	  ].join('\n'));
 
     $templateCache.put('partials/box.html',[
       '<p>',
-        '<cooltip type="box" cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip> ',
+        '<cooltip cooltip-type="box" cooltip-item="\'Lorem\'" cooltip-effect="1" cooltip-content="Ctrl.ttcontent"></cooltip> ',
         'ipsum dolor sit amet, has in dico ',
-        '<cooltip type="box" cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip> ',
+        '<cooltip cooltip-type="box" cooltip-item="\'lobortis\'" cooltip-effect="2" cooltip-content="Ctrl.ttcontent"></cooltip> ',
         'expetendis, per nibh vero mutat no. Qui no copiosae ',
-        '<cooltip type="box" cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip>',
+        '<cooltip cooltip-type="box" cooltip-item="\'deserunt\'" cooltip-effect="3" cooltip-content="Ctrl.ttcontent"></cooltip>',
         '. Vix in delenit omittam elaboraret, ut ',
-        '<cooltip type="box" cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip> ',
+        '<cooltip cooltip-type="box" cooltip-item="\'idque\'" cooltip-effect="4" cooltip-content="Ctrl.ttcontent"></cooltip> ',
         'atqui deleniti qui. Quo nisl fuisset id. Ut veniam mollis vix. Veniam iudicabit no pri, ne eam sale cetero ',
-        '<cooltip type="box" cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip>.',
+        '<cooltip cooltip-type="box" cooltip-item="\'reprehendunt\'" cooltip-effect="5" cooltip-content="Ctrl.ttcontent"></cooltip>.',
       '</p>'
     ].join('\n'));
 
 	  $templateCache.put('partials/round.html',[
 	  	'<ul>',
 	  		'<li>',
-	  			'<cooltip type="round" ng-repeat="item in Ctrl.list" cooltip-item="item.name" cooltip-effect="item.effect" cooltip-content="item.content"></cooltip>',
+	  			'<cooltip cooltip-type="round" ng-repeat="item in Ctrl.list" cooltip-item="item.name" cooltip-effect="item.effect" cooltip-content="item.content"></cooltip>',
 	  		'</li>',
 	  	'</ul>'
 	  ].join('\n'));

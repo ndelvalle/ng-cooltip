@@ -26,20 +26,16 @@ An angular module with a small collection of various hover tooltip. This module 
     ```js
     angular.module('myApp', ['ng-cooltip'])
     ```
-    
-#### Directives
-* cooltipClassic
-* cooltipBox
-* cooltipRound
 
 #### Params
-| option          | Description                                    | Values                |
-| -------------   |:----------------------------------------------:| ---------------------:|
-| cooltip-item    | word / sentence that fires the tooltip         | String                |
-| cooltip-content | content on tooltip, it could be an html element| String / html element |
-| cooltip-effect  | firing tooltip effect                          | [1-5]                 |
+| option          | Description                                    | Values                   |
+| -------------   |:----------------------------------------------:| ---------------------:   |
+| cooltip-type    | cooltip type and style                         | 'classic', 'box', 'round'|
+| cooltip-item    | word / sentence that fires the tooltip         | String                   |
+| cooltip-content | content on tooltip, it could be an html element| String / html element    |
+| cooltip-effect  | firing tooltip effect                          | [1-5]                    |
 
 #### Usage example
 ```html
-<p>Lorem ipsum dolor sit amet, et perfecto deserunt <cooltip-classic cooltip-item="intellegam" cooltip-content="Vel ut solum erant dicit, eum te aperiam efficiendi, et eos alia eruditi persecuti. Ius ex omnis voluptatum" cooltip-effect="1"></cooltip-classic>nam, quem doming platonem vim no.</p>
+<p>Lorem ipsum dolor sit amet, et perfecto deserunt <cooltip cooltip-type="classic" cooltip-item="intellegam" cooltip-content="Vel ut solum erant dicit, eum te aperiam efficiendi, et eos alia eruditi persecuti. Ius ex omnis voluptatum" cooltip-effect="1"></cooltip-classic>nam, quem doming platonem vim no.</p>
 ```

@@ -15,8 +15,8 @@
 				$scope.trustedHtmlContent = $sce.trustAsHtml($scope.content);
 				$scope.effect = ($scope.effect > 0 && $scope.effect < 6) ? $scope.effect : 1;
 			}],
-			templateUrl: function (elem, attr) {
-				return (attr.type || 'classic') + '.html';
+			templateUrl: function (elem, attrs) {
+				return (attrs.cooltipType || 'classic') + '.html';
 			}
 		};
 	}])
