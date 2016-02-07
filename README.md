@@ -8,12 +8,14 @@ An angular module with a small collection of various hover tooltip. This module 
   ```
     $ bower install ng-cooltip --save
   ```
+  
   You can also install with _npm_
   ```
     $ npm install ng-cooltip --save
   ```
 2. Include the supplied JS file
-  _Squip to 3 if you use Commonjs modules_
+  
+  _Skip to 3 if you use Commonjs modules_
 
     ```html
     <!-- Bower -->
@@ -25,6 +27,7 @@ An angular module with a small collection of various hover tooltip. This module 
 3. Include the supplied CSS file (or create your own CSS to override defaults)
 
     ```html
+    <!-- Bower -->
     <link rel='stylesheet' href='bower_components/ng-cooltip/dist/ng-cooltip.min.css' type='text/css' />
     <!-- npm -->
     <link rel='stylesheet' href='node_modules/ng-cooltip/dist/ng-cooltip.min.css' type='text/css' />
