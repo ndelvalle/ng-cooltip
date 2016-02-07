@@ -1,7 +1,7 @@
 (function (){
 	'use strict';
 
-	angular.module('ng-cooltip', [])
+	var ngCooltip = angular.module('ng-cooltip', [])
 
 	.directive('cooltip', [function () {
 		return {
@@ -60,6 +60,7 @@
 	  ].join('\n'));
 
 	}]);
+	
+	module.exports = ngCooltip;
 
 })();
-

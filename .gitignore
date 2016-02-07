@@ -5,3 +5,5 @@ node_modules
 *.log
 *.sublime-workspace
 *.sublime-project
+jsconfig.json
+typings/*

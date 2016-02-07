@@ -4,12 +4,16 @@ An angular module with a small collection of various hover tooltip. This module 
 
 ## Usage:
 
-1. Install ng-cooltip from bower or import script manually
+1. Install ng-cooltip from _bower_ or import script manually
   ```
     $ bower install ng-cooltip --save
   ```
-  
+  You can also install with _npm_
+  ```
+    $ npm install ng-cooltip --save
+  ```
 2. Include the supplied JS file
+  _Squip to 4 if you use Commonjs modules_
 
     ```html
     <script type='text/javascript' src='dist/ng-cooltip.min.js'></script>
@@ -25,6 +29,13 @@ An angular module with a small collection of various hover tooltip. This module 
 
     ```js
     angular.module('myApp', ['ng-cooltip'])
+    ```
+  If you use Commonjs modules:
+    ```js
+    var ngCooltip = require('ng-cooltip');
+    
+    
+    angular.module('myApp', [ngCooltip])
     ```
 
 #### Params
