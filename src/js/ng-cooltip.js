@@ -1,7 +1,9 @@
 (function (){
 	'use strict';
+    
+    var moduleName = 'ng-cooltip';
 
-	var ngCooltip = angular.module('ng-cooltip', [])
+	angular.module(moduleName, [])
 
 	.directive('cooltip', [function () {
 		return {
@@ -61,6 +63,6 @@
 
 	}]);
 	
-	module.exports = ngCooltip;
+	module.exports = moduleName;
 
 })();
