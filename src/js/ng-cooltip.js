@@ -1,9 +1,7 @@
 (function (){
 	'use strict';
-    
-    var moduleName = 'ng-cooltip';
 
-	angular.module(moduleName, [])
+	angular.module('ng-cooltip', [])
 
 	.directive('cooltip', [function () {
 		return {
@@ -13,56 +11,62 @@
 				content: '=cooltipContent',
 				effect:  '=cooltipEffect'
 			},
-			controller: ['$scope', '$sce', function ($scope, $sce) {
-				$scope.trustedHtmlContent = $sce.trustAsHtml($scope.content);
-				$scope.effect = ($scope.effect > 0 && $scope.effect < 6) ? $scope.effect : 1;
-			}],
-			templateUrl: function (elem, attrs) {
-				return (attrs.cooltipType || 'classic') + '.html';
-			}
+			controller: coolTipController,
+      controllerAs: 'vm',
+      bindToController: true,
+			templateUrl: templateUrl
 		};
 	}])
 
-	.run(['$templateCache', function($templateCache) {
+	.run(runTemplateCache);
 
-	  $templateCache.put('classic.html', [
+  coolTipController.$inject = ['$sce'];
+  function coolTipController($sce) {
+    this.trustedHtmlContent = $sce.trustAsHtml(this.content);
+    this.effect = (this.effect > 0 && this.effect < 6) ? this.effect : 1;
+  }
+
+  function templateUrl(elem, attrs) {
+    return (attrs.cooltipType || 'classic') + '.html';
+  }
+
+  runTemplateCache.$inject = ['$templateCache'];
+  function runTemplateCache($templateCache) {
+    $templateCache.put('classic.html', [
       '<span id="ng-cooltip">',
         '<span id="cooltip-classic">',
-    	  	'<span class="tooltip tooltip-effect-{{ effect }}">',
-    	  		'<span class="tooltip-item">{{ item }}</span>',
-    	  		'<span class="tooltip-content clearfix">',
-    	  			'<span class="tooltip-text" ng-bind-html="trustedHtmlContent"></span>',
-    	  		'</span>',
-    	  	'</span>',
-        '</span>',
-      '</span>'
-	  ].join('\n'));
-
-    $templateCache.put('box.html', [
-      '<span id="ng-cooltip">',
-        '<span id="cooltip-box">',
-          '<span class="tooltip tooltip-effect-{{ effect }}">',
-            '<span class="tooltip-item">{{ item }}</span>',
+          '<span class="tooltip tooltip-effect-{{ vm.effect }}">',
+            '<span class="tooltip-item">{{ vm.item }}</span>',
             '<span class="tooltip-content clearfix">',
-              '<span class="tooltip-text" ng-bind-html="trustedHtmlContent"></span>',
+              '<span class="tooltip-text" ng-bind-html="vm.trustedHtmlContent"></span>',
             '</span>',
           '</span>',
         '</span>',
       '</span>'
     ].join('\n'));
 
-	  $templateCache.put('round.html', [
+    $templateCache.put('box.html', [
       '<span id="ng-cooltip">',
-        '<span id="cooltip-round">',
-  	  	  '<a class="tooltip tooltip-effect-{{ effect }}" href="#"> {{ item }}',
-  	  		 '<span class="tooltip-content" ng-bind-html="trustedHtmlContent"></span>',
-  	  	  '</a>',
+        '<span id="cooltip-box">',
+          '<span class="tooltip tooltip-effect-{{ vm.effect }}">',
+            '<span class="tooltip-item">{{ vm.item }}</span>',
+            '<span class="tooltip-content clearfix">',
+              '<span class="tooltip-text" ng-bind-html="vm.trustedHtmlContent"></span>',
+            '</span>',
+          '</span>',
         '</span>',
       '</span>'
-	  ].join('\n'));
+    ].join('\n'));
 
-	}]);
-	
-	module.exports = moduleName;
+    $templateCache.put('round.html', [
+      '<span id="ng-cooltip">',
+        '<span id="cooltip-round">',
+          '<a class="tooltip tooltip-effect-{{ vm.effect }}" href="#"> {{ vm.item }}',
+           '<span class="tooltip-content" ng-bind-html="vm.trustedHtmlContent"></span>',
+          '</a>',
+        '</span>',
+      '</span>'
+    ].join('\n'));
+  }
 
 })();
