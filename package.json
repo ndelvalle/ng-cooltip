@@ -1,16 +1,18 @@
 {
   "name": "ng-cooltip",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An angular module with a small collection of various hover tooltip",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "dist/ng-cooltip.min.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ndelvalle/ng-cooltip.git"
   },
   "keywords": [
+    "angular",
+    "angularjs",
     "tooltip",
     "cooltip"
   ],
@@ -19,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/ndelvalle/ng-cooltip/issues"
   },
-  "homepage": "https://github.com/ndelvalle/ng-cooltip#readme",
+  "homepage": "http://ndelvalle.github.io/ng-cooltip/",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
