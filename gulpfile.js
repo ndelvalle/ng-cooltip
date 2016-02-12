@@ -26,3 +26,5 @@ gulp.task('build-css', function() {
 });
 
 gulp.task('production', ['build-js', 'build-css']);
+
+gulp.task('default', ['production']);
