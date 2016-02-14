@@ -2,7 +2,7 @@
 	'use strict';
 
 	var globalCtrl = [function () {
-		this.ttcontent = 'Vel ut solum erant dicit, eum te aperiam efficiendi, et eos alia eruditi persecuti. Ius ex omnis voluptatum';
+		this.ttcontent = '<span>Vel ut solum erant dicit, eum te aperiam efficiendi, <strong>et eos alia eruditi persecuti</strong>. Ius ex omnis voluptatum</span>';
 	}];
 
 	var roundCtrl = [function () {
