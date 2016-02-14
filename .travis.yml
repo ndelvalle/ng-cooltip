@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "4.3.0"
 before_script:
-  - npm install -g gulp
-script: gulp test
+  - npm install
+script: node_modules/karma/bin/karma start karma.conf.js --single-run
