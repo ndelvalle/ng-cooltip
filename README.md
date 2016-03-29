@@ -10,7 +10,7 @@ An angular module with a small collection of various hover tooltip. This module 
     $ bower install ng-cooltip --save
     $ npm install ng-cooltip --save
     ```
-    
+
 2. Include the supplied JS file. Skip if you use Commonjs modules
 
     ``` html
@@ -19,7 +19,7 @@ An angular module with a small collection of various hover tooltip. This module 
     <!-- npm -->
     <script type='text/javascript' src='node_modules/ng-cooltip/dist/ng-cooltip.min.js'></script>
     ```
-    
+
 3. Include the supplied CSS file (or create your own CSS to override defaults)
 
     ```html
@@ -28,14 +28,14 @@ An angular module with a small collection of various hover tooltip. This module 
     <!-- npm -->
     <link rel='stylesheet' href='node_modules/ng-cooltip/dist/ng-cooltip.min.css' type='text/css' />
     ```
-    
+
 4. Add ng-cooltip dependency to your app
 
     ``` js
     angular.module('myApp', ['ng-cooltip'])
     ```
     If you use Commonjs modules:
-  
+
     ```js
     var ngCooltip = require('ng-cooltip');
     angular.module('myApp', [ngCooltip])
@@ -52,5 +52,5 @@ An angular module with a small collection of various hover tooltip. This module 
 
 #### Usage example
 ```html
-<p>Lorem ipsum dolor sit amet, et perfecto deserunt <cooltip cooltip-type="classic" cooltip-item="intellegam" cooltip-content="Vel ut solum erant dicit, eum te aperiam efficiendi, et eos alia eruditi persecuti. Ius ex omnis voluptatum" cooltip-effect="1"></cooltip>nam, quem doming platonem vim no.</p>
+<p>Lorem ipsum dolor sit amet, et perfecto deserunt <cooltip cooltip-type="classic" cooltip-item="'intellegam'" cooltip-content="'Vel ut solum erant dicit, eum te aperiam efficiendi, et eos alia eruditi persecuti. Ius ex omnis voluptatum'" cooltip-effect="1"></cooltip>nam, quem doming platonem vim no.</p>
 ```
