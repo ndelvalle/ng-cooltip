@@ -1,4 +1,4 @@
-# ng-cooltip [![Build Status](https://travis-ci.org/ndelvalle/ng-cooltip.svg?branch=master)](https://travis-ci.org/ndelvalle/ng-cooltip)
+# [ng-cooltip](https://ndelvalle.github.io/ng-cooltip/) [![Build Status](https://travis-ci.org/ndelvalle/ng-cooltip.svg?branch=master)](https://travis-ci.org/ndelvalle/ng-cooltip)
 
 An angular module with a small collection of various hover tooltip. This module is an angular wrapper of [Tooltip Styles Inspiration](https://github.com/codrops/TooltipStylesInspiration).
 
